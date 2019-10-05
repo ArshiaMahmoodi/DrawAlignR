@@ -26,16 +26,16 @@ Visualization is intended to occur downstream of an alignment tool, using two pe
 The user may first elect to simply visualize any peptide in the data set, without alignment to serve as a point of
 reference. This can be done using the following function:
 
-'''r
+```r
 plot_chrom_reference(chrom, precursor, Run_ID, RT, Left_width, Right_width, mz, sequence)
-'''
+```
 
 Providing the run and peptide information for the example data for precursor 960, in run 13:
 
-'''r
+```r
 library(DrawAlignR)
 plot_chrom_reference(chrom13_GR.mzML_ChromSelected, 960, 13, 2420.42, 2404.61, 2440.96, 630.2936, "VGEGTY(Phospho)GVVYK(Label:13C(6)15N(2))")
-'''
+```
 
 ![](./inst/extdata/Precursor_960_Run13.PNG)
 
@@ -62,16 +62,16 @@ plot_aligned(chrom12_GR.mzML_ChromSelected, 49.25, 960, 12, 13, 2470.89, 2420.42
 
 The author of this package is Arshia Mahmoodi. The following functions are intended for the user:
 
-'''r
+```r
 plot_chrom_reference
 plot_aligned
-'''
+```
 
 All functions were written by Arshia Mahmoodi.
 
 The upstream alignment was run with the help of Justin Sing and Shubham Gupta, and Hannes Rost, members of the Rost lab,
 using the DialignR package, which can be found at:
 
-'''r
+```r
 install_github("Roestlab/DIAlignR")
-'''
+```
