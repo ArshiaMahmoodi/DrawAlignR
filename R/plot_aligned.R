@@ -1,28 +1,30 @@
-# A function for the visualization of an aligned chromatogram to a reference chromatogram
+#' A function for the visualization of an aligned chromatogram to a reference chromatogram
+#'
+#' @param chrom rds chromatogram file which contains a list of peptides with their retention times and intensities.
+#'
+#' @param peptide the precursor id of the specific peptide you would like to plot.
+#'
+#' @param shift The specific retention time shift of the alignment, obtained upstream using DialignR
+#'
+#' @param Run_Id The run from which the peptide came from
+#'
+#' @param Reference_Id The reference run/precursor to which this peptide was aligned to.
+#'
+#' @param Reference_RT The retention time of the precursor in the reference run.
+#'
+#' @param RT The retention time of the peptide
+#'
+#' @param Left_width Left width of the retention time
 #
-# @param chrom rds chromatogram file which contains a list of peptides with their retention times and intensities.
-#
-# @param peptide the precursor id of the specific peptide you would like to plot.
-#
-# @param shift The specific retention time shift of the alignment, obtained upstream using DialignR
-#
-# @param Run_Id The run from which the peptide came from
-#
-# @param Reference_Id The reference run/precursor to which this peptide was aligned to.
-#
-# @param Reference_RT The retention time of the precursor in the reference run.
-#
-# #param RT The retention time of the peptide
-#
-# #param Left_width Left width of the retention time
-#
-# #param Right_width Right width of the retention time
-#
-# #param mz The mass to charge value of the precursor
-#
-# #param The sequence of the precursor
-#
-# @return None. Produces plot output.
+#' @param Right_width Right width of the retention time
+#'
+#' @param mz The mass to charge value of the precursor
+#'
+#' @param The sequence of the precursor
+#'
+#' @return None. Produces plot output.
+#'
+#' @export
 
 plot_aligned <- function(chrom, shift, precursor, Run_ID, Reference_ID, RT, Reference_RT,
                                  Left_width, Right_width, mz, sequence) {

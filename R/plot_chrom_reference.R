@@ -1,23 +1,25 @@
-# A function for plotting the ms2 chromatogram of any peptide. It's usage is to plot the reference chromatogram,
-# which is the run that all other chromatograms are aligned to.
+#' A function for plotting the ms2 chromatogram of any peptide. It's usage is to plot the reference chromatogram,
+#' which is the run that all other chromatograms are aligned to.
+#'
+#' @param chrom rds chromatogram file which contains a list of peptides with their retention times and intensities.
+#'
+#' @param peptide the precursor id of the specific peptide you would like to plot.
+#'
+#' @param Run_Id The run from which the peptide came from
+#'
+#' @param RT The retention time of the peptide
+#'
+#' @param Left_width Left width of the retention time
+#'
+#' @param Right_width Right width of the retention time
+#'
+#' @param mz The mass to charge value of the precursor
+#'
+#' @param The sequence of the precursor
 #
-# @param chrom rds chromatogram file which contains a list of peptides with their retention times and intensities.
-#
-# @param peptide the precursor id of the specific peptide you would like to plot.
-#
-# @param Run_Id The run from which the peptide came from
-#
-# #param RT The retention time of the peptide
-#
-# #param Left_width Left width of the retention time
-#
-# #param Right_width Right width of the retention time
-#
-# #param mz The mass to charge value of the precursor
-#
-# #param The sequence of the precursor
-#
-# @return None. Produces plot output.
+#' @return None. Produces plot output.
+#'
+#' @export
 
 plot_chrom_reference <- function(chrom, precursor, Run_ID, RT, Left_width, Right_width, mz, sequence) {
 
