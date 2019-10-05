@@ -8,8 +8,8 @@ To install this package, follow these commands:
 
 ``` r
 require("devtools")
-install_github("fuscada2/PeakMapper")
-library(PeakMapper)
+install_github("ArshiaMahmoodi/DrawAlignR")
+library(DrawAlignR)
 ```
 
 ## Overview
