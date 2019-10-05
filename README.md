@@ -52,8 +52,9 @@ plot_chrom_reference(chrom12_GR.mzML_ChromSelected, 960, 12, 2470.89, 2451.82, 2
 Afterwards, the user can visualize the aligned chromatogram to the reference run. Here, run 13 was the reference
 and run 12 was aligned. The shift value was calculated upstream using DiaLignR and is not shown.
 
-
+``` r
 plot_aligned(chrom12_GR.mzML_ChromSelected, 49.25, 960, 12, 13, 2470.89, 2420.42,2451.82, 2495.44, 630.2936, "VGEGTY(Phospho)GVVYK(Label:13C(6)15N(2))")
+```
 
 ![](./inst/extdata/Precursor_960_Run12_Aligned.PNG)
 
