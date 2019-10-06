@@ -1,12 +1,13 @@
 Package: DrawAlignR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Visualizes Aligned Ms2 Chromatograms
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Arshia Mahmoodi
+Maintainer: Arshia Mahmoodi <arshia.mahmoodi@mail.utoronto.ca>
+Description: A package for the visualization of aligned Ms2 chromatograms. The main intended use of this package is
+             to be used downstream of a chromatogram alignment tool for ms2 chromatograms, to draw and visualize
+             the newly generated aligned chromatograms.
+License: MIT
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
