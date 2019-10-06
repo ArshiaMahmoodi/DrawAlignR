@@ -70,7 +70,7 @@ plot_aligned
 
 All functions were written by Arshia Mahmoodi.
 
-The upstream alignment was run with the help of Justin Sing and Shubham Gupta, and Hannes Rost, members of the Rost lab,
+The upstream alignment was run with the help of Justin Sing and Shubham Gupta, and Dr. Hannes Rost, members of the Rost lab,
 using the DialignR package, which can be found at:
 
 ``` r
