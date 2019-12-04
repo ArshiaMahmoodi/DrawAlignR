@@ -3,6 +3,17 @@
 \name{runDrawAlignR}
 \alias{runDrawAlignR}
 \title{Launches the shiny app for DrawAlignR - User facing function.}
+\source{
+"GetXIC.r"
+
+"getPepLibData.R"
+
+"getChromatogramDatapoints.R"
+
+"plot_aligned.R"
+
+"plot_chrom_reference.R"
+}
 \usage{
 runDrawAlignR()
 }
