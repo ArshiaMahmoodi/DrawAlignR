@@ -4,8 +4,19 @@
 \alias{plot_aligned}
 \title{A function for the visualization of an aligned chromatogram to a reference chromatogram}
 \usage{
-plot_aligned(chrom, shift, precursor, Run_ID, Reference_ID, RT,
-  Reference_RT, Left_width, Right_width, mz, sequence)
+plot_aligned(
+  chrom,
+  shift,
+  precursor,
+  Run_ID,
+  Reference_ID,
+  RT,
+  Reference_RT,
+  Left_width,
+  Right_width,
+  mz,
+  sequence
+)
 }
 \arguments{
 \item{chrom}{rds chromatogram file which contains a list of peptides with their retention times and intensities.}
@@ -22,13 +33,13 @@ plot_aligned(chrom, shift, precursor, Run_ID, Reference_ID, RT,
 
 \item{mz}{The mass to charge value of the precursor}
 
+\item{sequence}{The sequence of the precursor}
+
 \item{peptide}{the precursor id of the specific peptide you would like to plot.}
 
 \item{Run_Id}{The run from which the peptide came from}
 
 \item{Reference_Id}{The reference run/precursor to which this peptide was aligned to.}
-
-\item{The}{sequence of the precursor}
 }
 \value{
 None. Produces plot output.

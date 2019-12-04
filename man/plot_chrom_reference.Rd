@@ -5,8 +5,16 @@
 \title{A function for plotting the ms2 chromatogram of any peptide. It's usage is to plot the reference chromatogram,
 which is the run that all other chromatograms are aligned to.}
 \usage{
-plot_chrom_reference(chrom, precursor, Run_ID, RT, Left_width, Right_width,
-  mz, sequence)
+plot_chrom_reference(
+  chrom,
+  precursor,
+  Run_ID,
+  RT,
+  Left_width,
+  Right_width,
+  mz,
+  sequence
+)
 }
 \arguments{
 \item{chrom}{rds chromatogram file which contains a list of peptides with their retention times and intensities.}
@@ -19,11 +27,11 @@ plot_chrom_reference(chrom, precursor, Run_ID, RT, Left_width, Right_width,
 
 \item{mz}{The mass to charge value of the precursor}
 
+\item{sequence}{The sequence of the precursor}
+
 \item{peptide}{the precursor id of the specific peptide you would like to plot.}
 
 \item{Run_Id}{The run from which the peptide came from}
-
-\item{The}{sequence of the precursor}
 }
 \value{
 None. Produces plot output.
