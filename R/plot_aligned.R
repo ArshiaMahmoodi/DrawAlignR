@@ -20,44 +20,43 @@
 #'
 #' @param mz The mass to charge value of the precursor
 #'
-#' @param The sequence of the precursor
+#' @param sequence The sequence of the precursor
 #'
 #' @return None. Produces plot output.
 #'
-#' @export
 
 plot_aligned <- function(chrom, shift, precursor, Run_ID, Reference_ID, RT, Reference_RT,
-                                 Left_width, Right_width, mz, sequence) {
-
+                         Left_width, Right_width, mz, sequence) {
+  
   precursor_string <- toString(precursor)
-
-  plot(chrom$'960'[[1]]$time, chrom$'960'[[1]]$X73440, type='l', col='gray',
+  
+  plot(chrom$'Peptide'[[1]]$time, chrom$'Peptide'[[1]]$X73440, type='l', col='gray',
        main= paste("Aligned Ms2 Chromatogram of Precursor",precursor_string, "Run", Run_ID, "\n",  sequence, ",", "M/Z= ", mz),
        xlab="Retention time (s)", ylab="Intensity",
        font.main=2, font.lab=4, col.main='blue',
        xlim= c(2350,2550),
        sub= paste("Shift =", shift, ", Error =", RT - shift - Reference_RT), col.sub='purple', font.sub=2)
-
-  lines(chrom$'960'[[2]]$time, chrom$'960'[[2]]$X73523, col='gray')
-  lines(chrom$'960'[[3]]$time, chrom$'960'[[3]]$X73532, col='gray')
-  lines(chrom$'960'[[4]]$time, chrom$'960'[[4]]$X73580, col='gray')
-  lines(chrom$'960'[[5]]$time, chrom$'960'[[5]]$X73635, col='gray')
-  lines(chrom$'960'[[6]]$time, chrom$'960'[[6]]$X73664, col='gray')
-
+  
+  lines(chrom$'Peptide'[[2]]$time, chrom$'Peptide'[[2]]$X73523, col='gray')
+  lines(chrom$'Peptide'[[3]]$time, chrom$'Peptide'[[3]]$X73532, col='gray')
+  lines(chrom$'Peptide'[[4]]$time, chrom$'Peptide'[[4]]$X73580, col='gray')
+  lines(chrom$'Peptide'[[5]]$time, chrom$'Peptide'[[5]]$X73635, col='gray')
+  lines(chrom$'Peptide'[[6]]$time, chrom$'Peptide'[[6]]$X73664, col='gray')
+  
   abline(v=RT, lty= 2, col = 'black', lwd = 2)
-
-
-  lines(chrom$'960'[[1]]$time - shift, chrom$'960'[[1]]$X73440, col='black')
-  lines(chrom$'960'[[2]]$time - shift, chrom$'960'[[2]]$X73523, col='red')
-  lines(chrom$'960'[[3]]$time - shift, chrom$'960'[[3]]$X73532, col='blue')
-  lines(chrom$'960'[[4]]$time - shift, chrom$'960'[[4]]$X73580, col='yellow')
-  lines(chrom$'960'[[5]]$time - shift, chrom$'960'[[5]]$X73635, col='purple')
-  lines(chrom$'960'[[6]]$time - shift, chrom$'960'[[6]]$X73664, col='green')
-
+  
+  
+  lines(chrom$'Peptide'[[1]]$time - shift, chrom$'Peptide'[[1]]$X73440, col='black')
+  lines(chrom$'Peptide'[[2]]$time - shift, chrom$'Peptide'[[2]]$X73523, col='red')
+  lines(chrom$'Peptide'[[3]]$time - shift, chrom$'Peptide'[[3]]$X73532, col='blue')
+  lines(chrom$'Peptide'[[4]]$time - shift, chrom$'Peptide'[[4]]$X73580, col='yellow')
+  lines(chrom$'Peptide'[[5]]$time - shift, chrom$'Peptide'[[5]]$X73635, col='purple')
+  lines(chrom$'Peptide'[[6]]$time - shift, chrom$'Peptide'[[6]]$X73664, col='green')
+  
   abline(v=RT - shift, lty= 2, col = 'black', lwd = 2)
-
+  
   abline(v=Reference_RT, col = 'green', lwd = 2)
-
+  
   arrows(RT, 3000, RT-shift, 3000, length = 0.20, angle = 30, code = 2, col = 'purple', lwd = 3)
-
+  
 }
