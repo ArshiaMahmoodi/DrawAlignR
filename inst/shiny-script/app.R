@@ -126,6 +126,16 @@ server <- function(input, output) {
 
 
         #If alignment is disabled, generate standard chromatogram plot.
+        
+        if (is.null(input$ChromatogramFile)){
+          stop()
+        }
+        else if (is.null(input$LibraryFile)){
+          stop()
+        }
+        else if (is.null(input$Mod)){
+          stop()
+        }
 
         if (!(input$Align)){
           chrom_input <- input$ChromatogramFile[[my_i, 'datapath']]
