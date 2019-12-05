@@ -20,58 +20,59 @@ Illustration of general overview:
 
 ## Usage and Example
 
-Visualization is intended to occur downstream of an alignment tool, using two peptide chromatograms and shift value
-(as obtained from alignment algorithm) as input.
+Visualization is intended to occurs downstream of an alignment tool, using 1 or more peptide chromatograms and the R package DIAlignR
+for alignment.
 
 The user may first elect to simply visualize any peptide in the data set, without alignment to serve as a point of
-reference. This can be done using the following function:
+reference. This can be done via the shiny web app by setting the following parameters:
 
-``` r
-plot_chrom_reference(chrom, precursor, Run_ID, RT, Left_width, Right_width, mz, sequence)
+Selecting 1 or more mzML files, e.g. chludwig_K150309_013_SW_0.chrom.mzML
+Selecting the library file , e.g psgs.pqp
+Full Peptide name, e.g ANS(UniMod:21)SPTTNIDHLK(UniMod:259)
+Peptide Charge:  e.g 2
+
+This will then plot the chromatogram for this peptide in the selected runs.
+![](./inst/extdata/Image3.PNG)
+
+If more than one chromatogram is supplied, multiple plots will be generated.
+
+![](./inst/extdata/Image2.PNG)
+
+Additionally, the plot is interactive and hovering over a point gives intensity, rt and id information
+
+![](./inst/extdata/Image4.PNG)
+
 ```
-
-Providing the run and peptide information for the example data for precursor 960, in run 13:
-
-``` r
-library(DrawAlignR)
-plot_chrom_reference(chrom13_GR.mzML_ChromSelected, 960, 13, 2420.42, 2404.61, 2440.96, 630.2936, "VGEGTY(Phospho)GVVYK(Label:13C(6)15N(2))")
-```
-
-![](./inst/extdata/Precursor_960_Run13.PNG)
-
-Providing the run and peptide information for the example data for precursor 960, in run 12:
-
-
-``` r
-plot_chrom_reference(chrom12_GR.mzML_ChromSelected, 960, 12, 2470.89, 2451.82, 2495.44, 630.2936, "VGEGTY(Phospho)GVVYK(Label:13C(6)15N(2))")
-```
-
-![](./inst/extdata/Precursor_960_Run12.PNG)
-
 
 Afterwards, the user can visualize the aligned chromatogram to the reference run. Here, run 13 was the reference
-and run 12 was aligned. The shift value was calculated upstream using DiaLignR and is not shown.
+and run 12 was aligned. Please see the vignette to see how to prepare and organize the files for alignment. In addition to the above,
+an sql database file ".osw" is required.
 
-``` r
-plot_aligned(chrom12_GR.mzML_ChromSelected, 49.25, 960, 12, 13, 2470.89, 2420.42,2451.82, 2495.44, 630.2936, "VGEGTY(Phospho)GVVYK(Label:13C(6)15N(2))")
-```
+Afterwards, checking the 'Plot Aligned' box
 
-![](./inst/extdata/Precursor_960_Run12_Aligned.PNG)
+![](./inst/extdata/Image5.PNG)
 
+Additionally, individual transitions can be selected/de selected from a particular aligned chromatogram to observe them.
+
+![](./inst/extdata/Image7.PNG)
+
+![](./inst/extdata/Image8.PNG)
 
 ## Contributions
 
 The author of this package is Arshia Mahmoodi. The following functions are intended for the user:
 
 ``` r
-plot_chrom_reference
-plot_aligned
+runDrawAlignRShiny.R
 ```
 
-All functions were written by Arshia Mahmoodi.
+The author of this package is Arshia Mahmoodi.
 
-The upstream alignment was run with the help of Justin Sing and Shubham Gupta, and Dr. Hannes Rost, members of the Rost lab,
-using the DialignR package, which can be found at:
+R scripts plot_aligned, plot_chrom_reference.R, runDrawAlignRShiny.R and app.R were authored by Arshia Mahmoodi.
+
+R scripts getChromatogramDataPoints.R, getPepLibData.R and getXIC.R were authored by Justin Sing, in the Roest Lab.
+
+R package DIAlignR was used to compute the alignment used by this package, the author of DIAlignR is Shubham Gupta, in the Roest Lab.
 
 ``` r
 install_github("Roestlab/DIAlignR")
