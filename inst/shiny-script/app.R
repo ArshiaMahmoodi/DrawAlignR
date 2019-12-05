@@ -79,13 +79,14 @@ ui <- fluidPage(
                 accept = c(".PQP")),
 
       #Path to directory where mzml folder and osw folder are located. By default is set to the working directory.
-      textInput(inputId = "WorkingDirectory", "Set Working Directory (Location of mzML and osw folders)", value = gsub('..$', '', getwd())),
+      textInput(inputId = "WorkingDirectory", "Set Working Directory (Location of mzML and osw folders)", 
+                value = paste((gsub('............$', '', getwd())), 'extdata', sep = '')),
 
       #Full peptide name including modifications
-      textInput(inputId = "Mod", "Peptide Name", value = ""),
+      textInput(inputId = "Mod", "Peptide Name", value = "ANS(UniMod:21)SPTTNIDHLK(UniMod:259)"),
 
       #Charge of desired peptide (Specific charge must be in data set)
-      numericInput(inputId = "Charge", "Peptide Charge", value = 1, min = 1, step = 1),
+      numericInput(inputId = "Charge", "Peptide Charge", value = 2, min = 1, step = 1),
 
       #Number of plots to display
       sliderInput("n", "Number of Plots", value=1, min=1, max=10),
