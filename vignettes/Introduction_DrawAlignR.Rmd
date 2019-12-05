@@ -1,0 +1,78 @@
+---
+title: "introduction_DrawAlignR"
+author: "Arshia Mahmoodi"
+output: rmarkdown::html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+DrawAlignR is an R package for the visualization of ms2 chromatograms with support for multi run experiments and proteins with post-
+translational modifications.
+
+# Data preparation
+
+Raw chromatogram data should be in the .mzML file format and organized into a folder titled 'mzml'
+For the provided example data set, in the mzml folder:
+chludwig_K150309_010_SW_1_2.chrom.mzML
+chludwig_K150309_011_SW_1_1point5.chrom.mzML
+chludwig_K150309_012_SW_1_1.chrom.mzML
+chludwig_K150309_013_SW_0.chrom.mzML
+
+For simple Chromatogram plotting (without alignment), a .pqp library folder is required and can be uploaded directly to the app.
+In the working example, psgs.pqp is found in extdata/PQP Library.
+
+For plotting with alignment, the database .osw file is required and must be organized into a folder titled osw, in the same working directory as the 'mzml' folder. This directory can be set within the app, but defaults to extdata.
+For the provided example data set, GR.merged.osw must be downloaded from DropBox and placed within the osw folder (This is since it
+exceeds githubs 2gb limit)
+
+# Simple Chromatogram Plotting
+
+**Note, plotting may take up to 2 minutes per mzML selected**
+
+Initially, choose a chromatogram file. A minimum of 1 .mzML chromatogram must be selected but multiple files are supported.
+For the working example, select 1-4 of the provided .mzML files via the apps "Choose a Chromatogram File"
+
+Similairly, a .pqp file must be uploaded in similair fashion. For the working example, select psgs.pqp.
+
+A full peptide name must be given. This can be any peptide within the data set. By default, ANS(UniMod:21)SPTTNIDHLK(UniMod:259) is selected
+
+Since this peptide can have multiple charge states, with different chromatograms, the peptide charge must be specified. By default, for 
+the example peptide charge +2 and +3 are found in the data set.
+
+A chromatogram will then be plotted for the desired peptide for each mzML run selected. The user can elect to view 1 or all of these plots simultaneous by adjusting the number of plots in the app, up to a maximum of 10.
+
+
+# Alignment
+
+**Note, plotting and alignment my take up to 3 minutes per mzML selectd**
+
+Before plotting with alignment, ensure all inputs are set for regular chromatogram plotting above, and that the file organaization in 
+Data preparation is followed.
+
+In addition to the above, ensure the working directory in the app is set to the location of the mzml and osw folders. By default it looks
+in inst/extdata as this is where the folders are on installation.
+
+Ensure 2 or more mzML files are selected and presented. Alignment works in a pairwise fashion, if fewer than two chromatograms are supplied, it will be plotted regularly.
+
+Select a reference run for alignment. In the working example, chludwig_K150309_013_SW_0 is selected. It is recommended that for this example this not be changed as it is the highest concentration run and would provided most accurate alignment. Since alignment is
+conducted in a one against all fashion, this run will be aligned against all other runs.
+
+Tick the "Plot aligned" checkbox to commence alignment and plotting.
+
+# References
+
+The author of this package is Arshia Mahmoodi.
+
+R scripts plot_aligned, plot_chrom_reference.R, runDrawAlignRShiny.R and app.R were authored by Arshia Mahmoodi.
+
+R scripts getChromatogramDataPoints.R, getPepLibData.R and getXIC.R were authored by Justin Sing, in the Roest Lab.
+
+R package DIAlignR was used to compute the alignment used by this package, the author of DIAlignR is Shubham Gupta, in the Roest Lab.
+
+```{r}
+sessionInfo()
+```
