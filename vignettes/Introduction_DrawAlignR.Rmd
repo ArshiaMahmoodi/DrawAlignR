@@ -1,6 +1,7 @@
 ---
 title: "introduction_DrawAlignR"
 author: "Arshia Mahmoodi"
+date: "`r format(Sys.Date()"
 output: rmarkdown::html_document
 ---
 
@@ -90,6 +91,19 @@ Looking at a single or a few particular transitions:
 
 ![](./inst/extdata/Image7.PNG)
 ![](./inst/extdata/Image8.PNG)
+
+## Sample out of app session for simple plotting
+
+```{r}
+          chrom_input <- "../inst/extdata/mzml/chludwig_K150309_013_SW_0.chrom.mzML"
+          lib_input <- "../inst/extdata/PQP library/psgs.pqp"
+          peptide <- "ANS(UniMod:21)SPTTNIDHLK(UniMod:259)"
+          lib <- getPepLibData_(lib_input, peptide_id = '')
+          g.out <- getXIC(graphic_obj = ggplot(), chromatogram_file = chrom_input,
+                          df_lib = lib, mod = peptide, Isoform_Target_Charge = 2)
+          plotly::ggplotly(g.out$graphic_obj, dynamicTicks = TRUE)
+
+```
 
 # References
 
