@@ -53,13 +53,13 @@ an sql database file ".osw" is required.
 
 Afterwards, checking the 'Plot Aligned' box
 
-![](./inst/extdata/image 5.PNG)
+![](./inst/extdata/image5.PNG)
 
 Additionally, individual transitions can be selected/de selected from a particular aligned chromatogram to observe them.
 
-![](./inst/extdata/image 7.PNG)
+![](./inst/extdata/image7.PNG)
 
-![](./inst/extdata/image 8.PNG)
+![](./inst/extdata/image8.PNG)
 
 ## Contributions
 
