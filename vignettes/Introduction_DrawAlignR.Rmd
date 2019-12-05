@@ -46,7 +46,7 @@ the example peptide charge +2 and +3 are found in the data set.
 
 A chromatogram will then be plotted for the desired peptide for each mzML run selected. The user can elect to view 1 or all of these plots simultaneous by adjusting the number of plots in the app, up to a maximum of 10.
 
-![](./inst/extdata/Image1.PNG)
+![](./inst/extdata/Image3.PNG)
 
 Plotting Multiple plots
 
