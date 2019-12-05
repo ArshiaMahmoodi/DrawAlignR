@@ -36,15 +36,15 @@ Peptide Charge:  e.g 2
 
 This will then plot the chromatogram for this peptide in the selected runs.
 
-![](./inst/extdata/Image3.PNG)
+![](./inst/extdata/image3.PNG)
 
 If more than one chromatogram is supplied, multiple plots will be generated.
 
-![](./inst/extdata/Image2.PNG)
+![](./inst/extdata/image2.PNG)
 
 Additionally, the plot is interactive and hovering over a point gives intensity, rt and id information
 
-![](./inst/extdata/Image4.PNG)
+![](./inst/extdata/image4.PNG)
 
 
 Afterwards, the user can visualize the aligned chromatogram to the reference run. Here, run 13 was the reference
@@ -53,13 +53,13 @@ an sql database file ".osw" is required.
 
 Afterwards, checking the 'Plot Aligned' box
 
-![](./inst/extdata/Image 5.PNG)
+![](./inst/extdata/image 5.PNG)
 
 Additionally, individual transitions can be selected/de selected from a particular aligned chromatogram to observe them.
 
-![](./inst/extdata/Image 7.PNG)
+![](./inst/extdata/image 7.PNG)
 
-![](./inst/extdata/Image 8.PNG)
+![](./inst/extdata/image 8.PNG)
 
 ## Contributions
 
