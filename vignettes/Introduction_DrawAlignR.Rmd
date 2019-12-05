@@ -46,16 +46,16 @@ the example peptide charge +2 and +3 are found in the data set.
 
 A chromatogram will then be plotted for the desired peptide for each mzML run selected. The user can elect to view 1 or all of these plots simultaneous by adjusting the number of plots in the app, up to a maximum of 10.
 
-![](./inst/extdata/Image3.PNG)
+![](./inst/extdata/image3.PNG)
 
 Plotting Multiple plots
 
-![](./inst/extdata/Image2.PNG)
+![](./inst/extdata/image2.PNG)
 
 The plots are interactive and can be adjusted individually. Additionally, hovering over a particular transition highlights it and gives
 exact retention time, intensity and ID.
 
-![](./inst/extdata/Image4.PNG)
+![](./inst/extdata/image4.PNG)
 
 
 # Alignment
@@ -77,20 +77,20 @@ Tick the "Plot aligned" checkbox to commence alignment and plotting.
 
 Observing the first two aligned chromatograms, for runs 10 and 11 against run 13.
 
-![](./inst/extdata/Image5.PNG)
+![](./inst/extdata/image5.PNG)
 
 Observing the reference chromatogram, 13, against run 12:
 
-![](./inst/extdata/Image6.PNG)
+![](./inst/extdata/image6.PNG)
 
 Additionally, individual transitions can be selected/de selected from a particular aligned chromatogram to observe them.
 
-![](./inst/extdata/Image9.PNG)
+![](./inst/extdata/image9.PNG)
 
 Looking at a single or a few particular transitions:
 
-![](./inst/extdata/Image7.PNG)
-![](./inst/extdata/Image8.PNG)
+![](./inst/extdata/image7.PNG)
+![](./inst/extdata/image8.PNG)
 
 ## Sample out of app session for simple plotting
 
