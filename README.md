@@ -27,11 +27,15 @@ The user may first elect to simply visualize any peptide in the data set, withou
 reference. This can be done via the shiny web app by setting the following parameters:
 
 Selecting 1 or more mzML files, e.g. chludwig_K150309_013_SW_0.chrom.mzML
+
 Selecting the library file , e.g psgs.pqp
+
 Full Peptide name, e.g ANS(UniMod:21)SPTTNIDHLK(UniMod:259)
+
 Peptide Charge:  e.g 2
 
 This will then plot the chromatogram for this peptide in the selected runs.
+
 ![](./inst/extdata/Image3.PNG)
 
 If more than one chromatogram is supplied, multiple plots will be generated.
@@ -42,7 +46,6 @@ Additionally, the plot is interactive and hovering over a point gives intensity,
 
 ![](./inst/extdata/Image4.PNG)
 
-```
 
 Afterwards, the user can visualize the aligned chromatogram to the reference run. Here, run 13 was the reference
 and run 12 was aligned. Please see the vignette to see how to prepare and organize the files for alignment. In addition to the above,
@@ -50,13 +53,13 @@ an sql database file ".osw" is required.
 
 Afterwards, checking the 'Plot Aligned' box
 
-![](./inst/extdata/Image5.PNG)
+![](./inst/extdata/Image 5.PNG)
 
 Additionally, individual transitions can be selected/de selected from a particular aligned chromatogram to observe them.
 
-![](./inst/extdata/Image7.PNG)
+![](./inst/extdata/Image 7.PNG)
 
-![](./inst/extdata/Image8.PNG)
+![](./inst/extdata/Image 8.PNG)
 
 ## Contributions
 
