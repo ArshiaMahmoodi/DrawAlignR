@@ -32,13 +32,12 @@
 #' 
 #' @export
 
+library(shiny)
 
 runDrawAlignR <- function() {
-  appDir <- system.file("ShinyScript",
-                        package = "DrawAlignR")
+  #appDir <- system.file("shiny-script",
+  #                     package = "DrawAlignR")
 
-  shiny::runApp(appDir, display.mode = "normal")
+  shiny::runApp("inst/shiny-script", display.mode = "normal")
   return()
 }
-
-

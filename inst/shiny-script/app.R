@@ -30,12 +30,35 @@
 #' @source "plot_aligned.R"
 #' @source "plot_chrom_reference.R"
 
+library(plotly)
+library(shiny)
+library(ggplot2)
+library(data.table)
+library(plyr)
+library(tibble)
+library(ggplot2)
+library(gridExtra)
+library(ggrepel)
+library(signal)
+library(tidyverse)
+library(crayon)
+library(pbmcapply)
+library(mstools)
+library(zoo)
+library(dbplyr)
+library(tidyr)
+library(mzR)
+library(Rcpp)
+library(DIAlignR)
+library(latticeExtra)
+
 #Setting max file size
 options(shiny.maxRequestSize=10000*1024^2)
 
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install("mzR") # Requires netcdf
+
 
 ui <- fluidPage(
 
