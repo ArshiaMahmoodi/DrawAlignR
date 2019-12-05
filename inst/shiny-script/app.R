@@ -22,7 +22,7 @@
 #' @import mzR
 #' @import Rcpp
 #' @import DIAlignR
-#' @import LatticeExtra
+#' @import latticeExtra
 #'
 #' @source "GetXIC.r"
 #' @source "getPepLibData.R"
